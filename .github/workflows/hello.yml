@@ -10,5 +10,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Say hello
-       run: echo "Hello World!""
+       run: echo "Hello World!"
+      - name: Say hello
+       run: date
+      - name: Directory
        run: date
