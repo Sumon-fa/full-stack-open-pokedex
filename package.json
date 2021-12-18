@@ -9,7 +9,8 @@
     "test": "jest",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
-    "cleanup": "gulp strip-debug"
+    "cleanup": "gulp strip-debug",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
