@@ -1,11 +1,11 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import LoadingSpinner from "./LoadingSpinner";
-import { useApi } from "./useApi";
-import PokemonAbility from "./PokemonAbility";
-import ErrorMessage from "./ErrorMessage";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import LoadingSpinner from './LoadingSpinner';
+import { useApi } from './useApi';
+import PokemonAbility from './PokemonAbility';
+import ErrorMessage from './ErrorMessage';
 
-const formatName = (nameWithDash) => nameWithDash.replace("-", " ");
+const formatName = (nameWithDash) => nameWithDash.replace('-', ' ');
 
 const PokemonPage = ({ previous, next }) => {
   const { name } = useParams();
@@ -34,34 +34,34 @@ const PokemonPage = ({ previous, next }) => {
     (ability) => ability.is_hidden === true
   );
 
-  console.log("hiddenAbility=", hiddenAbility);
+  console.log('hiddenAbility=', hiddenAbility);
   return (
     <>
-      <div className="links">
+      <div className='links'>
         {previous && <Link to={`/pokemon/${previous.name}`}>Previous</Link>}
-        <Link to="/">Home</Link>
+        <Link to='/'>Home</Link>
         {next && <Link to={`/pokemon/${previous.name}`}>Next</Link>}
       </div>
       <div className={`pokemon-page pokemon-type-${type.name}`}>
         <div
-          className="pokemon-image"
+          className='pokemon-image'
           style={{ backgroundImage: `url(${pokemon.sprites.front_default})` }}
         />
-        <div className="pokemon-info">
-          <div className="pokemon-name">{pokemon.name}</div>
-          <div className="pokemon-stats" data-testid="stats">
+        <div className='pokemon-info'>
+          <div className='pokemon-name'>{pokemon.name}</div>
+          <div className='pokemon-stats' data-testid='stats'>
             <table>
               <tbody>
                 {stats.map(({ name, value }) => (
                   <tr key={name}>
-                    <td className="pokemon-stats-name">{name}</td>
-                    <td className="pokemon-stats-value">{value}</td>
+                    <td className='pokemon-stats-name'>{name}</td>
+                    <td className='pokemon-stats-value'>{value}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div className="pokemon-abilities">
+          <div className='pokemon-abilities'>
             {normalAbility && (
               <PokemonAbility
                 abilityName={formatName(normalAbility.ability.name)}

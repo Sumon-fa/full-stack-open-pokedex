@@ -20,7 +20,7 @@ module.exports = {
       "error",
       process.platform === "win32" ? "windows" : "unix",
     ],
-    quotes: ["error", "double"],
+    quotes: ["error", "single"],
     semi: [2, "always"],
     eqeqeq: "error",
     "no-trailing-spaces": "error",
