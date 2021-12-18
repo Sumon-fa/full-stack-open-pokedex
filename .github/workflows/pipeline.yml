@@ -29,4 +29,3 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: pokefullstackopencicd
           heroku_email: fakirsumon78@gmmail.com
-          healthcheck: 'https://pokefullstackopencicd.herokuapp.com/health'
