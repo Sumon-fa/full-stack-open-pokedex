@@ -16,8 +16,6 @@ const PokemonList = ({ pokemonList }) => {
           <div className='list-item-name'>{name}</div>
         </Link>
       ))}
-      <h1>gdggg</h1>
-      <h2>yfhfhfhf</h2>
     </div>
   );
 };
