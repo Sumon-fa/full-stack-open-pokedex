@@ -2,7 +2,7 @@
 
 This repository is used for the CI/CD module of the Full stack open course
 
-## Commands
+# Commands
 
 Start by running `npm install` inside the project folder
 
